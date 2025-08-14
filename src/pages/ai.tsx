@@ -22,7 +22,7 @@ export default function AIPage() {
     try {
       await createTask({
         title: s.task,
-        description: s.Task,
+        description: s.task,
         due_date: s.suggested_deadline || s.deadline,
         priority: s.priority,
         ai_suggested: true,
@@ -46,7 +46,7 @@ export default function AIPage() {
               <div className="flex justify-between">
               <div>
                 <h3 className="font-semibold">{s.task}</h3>
-                <div className="text-sm text-slate-300">{s.Task}</div>
+                <div className="text-sm text-slate-300">{s.task}</div>
                 {s.suggested_deadline && (
                 <div className="mt-2 text-xs text-slate-400">
                   Deadline: {new Date(s.deadline).toLocaleDateString()}
